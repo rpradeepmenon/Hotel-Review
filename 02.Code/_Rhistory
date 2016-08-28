@@ -1,0 +1,314 @@
+license()
+library(datasets)
+data(iris)
+?iris
+iris
+virgin <- subset(iris, Species = "virginica")
+View(virgin)
+View(virgin)
+virgin <- subset(iris, Species == "virginica")
+View(virgin)
+View(virgin)
+mean(virgin[,2])
+mean(virgin$Sepal.Length)
+mean(virgin[,1])
+virgin[,1]
+colMeans(iris)
+apply(iris[, 1:4], 1, mean)
+apply(iris[, 1:4], 2, mean)
+apply(virgin[, 1:4], 2, mean)
+x<-apply(iris[, 1:4], 2, mean)
+x
+is.vector(x)
+data(mtcars)
+?mtcars
+data(mtcars)
+?mtcars
+mtcars
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+x<-sapply(split(mtcars$mpg, mtcars$cyl), mean)
+x[1]-x[3]
+debug(ls)
+ls
+ls
+?debug
+ls
+debug(ls)
+ls
+?ls
+lm
+ls()
+lm()
+ls()
+set.seed(1)
+rpois(5,2)
+rpois(5,2)
+rpois(5,2)
+?rpois
+?rnorm
+?pnorm
+rnorm(5)
+rnorm(5)
+rnorm(5)
+?set.seed
+?system.time
+x <- rep(0:1, each = 5)
+set.seed(10)
+e <- rnorm(10, 0, 20)
+e <- rnorm(10, 0, 20)
+e <- rnorm(10, 0, 20)
+y <- 0.5 + 2 * x + e
+y <- 0.5 + 2 * x + e
+y <- 0.5 + 2 * x + e
+y <- 0.5 + 2 * x + e
+e <- rnorm(10, 0, 20)
+y <- 0.5 + 2 * x + e
+y <- 0.5 + 2 * x + e
+y <- 0.5 + 2 * x + e
+?rpois
+getwd()
+setwd("~/AscottReview")
+install.packages("rvest")
+?rvest
+??rvest
+source('~/AscottReview/scrapeReview.R')
+install.package("xml2")
+install.packages("xml2")
+install.packages("xml2")
+source('~/AscottReview/scrapeReview.R')
+?function
+??function
+urllink <- https://www.tripadvisor.com.sg/Hotel_Review-g293916-d619165-Reviews-Ascott_Sathorn_Bangkok-Bangkok.html#REVIEWS
+urllink <- "https://www.tripadvisor.com.sg/Hotel_Review-g293916-d619165-Reviews-Ascott_Sathorn_Bangkok-Bangkok.html#REVIEWS"
+doc=htmlTreeParse(urllink,useInternalNodes=TRUE)
+library("xml2")
+doc=htmlTreeParse(urllink,useInternalNodes=TRUE)
+library("xml1")
+library("xml")
+install.packages("xml")
+install.packages("XML")
+library("XML")
+doc=htmlTreeParse(urllink,useInternalNodes=TRUE)
+urllink <- "https://www.tripadvisor.com.sg/Hotel_Review-g293916-d619165-Reviews-Ascott_Sathorn_Bangkok-Bangkok.html"
+doc=htmlTreeParse(urllink,useInternalNodes=TRUE)
+source('~/AscottReview/scrapeReview.R')
+source('~/AscottReview/scrapeReview.R')
+getOnePage(url)
+source('~/AscottReview/scrapeReview.R')
+getOnePage(url)
+rating <- getOnePage(URL)
+rating <- getOnePage(url)
+View(rating)
+View(rating)
+?seq
+source('~/AscottReview/scrapeReview.R')
+pickhotel="bangkok"
+urlmainlist()
+urlmainlist[]
+urlmainlist
+urlmainlist=c(
+bangkok="https://www.tripadvisor.com.sg/Hotel_Review-g293916-d619165-Reviews-Ascott_Sathorn_Bangkok-Bangkok.html",
+hamptoninn="http://www.tripadvisor.com/Hotel_Review-g37209-d1236866-Reviews-Hampton_Inn_Indianapolis_Northwest_Park_100-Indianapolis_Indiana.html",
+conrad="http://www.tripadvisor.com/Hotel_Review-g37209-d576787-Reviews-Conrad_Indianapolis-Indianapolis_Indiana.html"
+)
+urlmainlist
+urlmainlist
+morepglist=list(
+bangkok=seq(10,430,10),
+hamptoninn=seq(10,190,10),
+conrad=seq(10,640,10)
+)
+# pick hotel for which review data is to be extracted
+# choices: jwmarriott,hamptoninn,conrad
+pickhotel="bangkok"
+# get list of urllinks corresponding to different pages
+# url link for first search page
+urllinkmain=urlmainlist[pickhotel]
+# counter for additional pages
+morepg=as.numeric(morepglist[[pickhotel]])
+urllinkpre=paste(strsplit(urllinkmain,"Reviews-")[[1]][1],"Reviews",sep="")
+urllinkpost=strsplit(urllinkmain,"Reviews-")[[1]][2]
+urllink=rep(NA,length(morepg)+1)
+urllink[1]=urllinkmain
+for(i in 1:length(morepg)){
+urllink[i+1]=paste(urllinkpre,"-or",morepg[i],"-",urllinkpost,sep="")
+}
+head(urllink)
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeFunctions.R')
+source('~/AscottReview/scrapeFunctions.R')
+source('~/AscottReview/scrapeReviews.R')
+dfrating
+View(dfrating)
+View(dfrating)
+source('~/AscottReview/scrapeReviews.R')
+View(dfrating)
+View(dfrating)
+filenm=paste("dfrating_",pickhotel,".Rda",sep="")
+save(dfrating,file=filenm)
+pickhotel="singapore"
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+View(dfrating)
+View(dfrating)
+library(dplyr)
+install.packages("dplyr")
+library(dplyr)
+source('~/AscottReview/sentimentAnalysis.R')
+install.packages("lubridate")
+install.packages("ggplot2")
+#library(topicmodels)
+source('~/AscottReview/sentimentAnalysis.R')
+hotellist=c("bangkok","singapore","shanghai","beijing")
+dfrating.l=lapply(hotellist,
+function(x) {
+filenm=paste("dfrating_",x,".Rda",sep="")
+load(filenm)
+return(list(dfrating=dfrating,
+top3records=head(dfrating,3),
+numrevs=nrow(dfrating),
+freqRating=table(dfrating$ratingnum)))
+})
+names(dfrating.l)=hotellist
+source('~/AscottReview/sentimentAnalysis.R')
+View(dfrating)
+View(dfrating)
+View(dfrating)
+dfrating.l[["shanghai"]]$top3records
+dfrating.l[["singapore"]]$top3records
+data<- getOnePage(urllink)
+data<- getOnePage(urllinkpre)
+View(data)
+View(data)
+source('~/AscottReview/scrapeFunctions.R')
+data<- getOnePage(urllinkpre)
+View(data)
+View(data)
+source('~/AscottReview/scrapeFunctions.R')
+source('~/AscottReview/scrapeReviews.R')
+View(dfrating)
+View(dfrating)
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/sentimentAnalysis.R')
+dfrating.l[[pickhotel]]$top3records
+source('~/AscottReview/sentimentAnalysis.R')
+dfrating.l[[pickhotel]]$top3records
+View(dfrating)
+View(dfrating)
+#dfrating.l[[pickhotel]]$freqRating
+dfrating.l[[pickhotel]]$freqRating
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+install.packages("tm")
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+dfrating.l[[pickhotel]]$freqRating
+pickhotel <- "singapore"
+dfrating.l[[pickhotel]]$freqRating
+source('~/AscottReview/sentimentAnalysis.R')
+topTerm
+topTerms.l=lapply(hotellist,function(x) getTopTerms(x))
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+getTopTerms("bangkok")
+dfrating.l[["bangkok"]]$freqRating
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+?seq
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+dfrating$quote
+dfrating$quote[dfrating$rating==5]
+dfrating$quote[dfrating$rating==4]
+dfrating$quote[dfrating$rating==3]
+dfrating$quote[dfrating$rating==2]
+dfrating$quote[dfrating$rating==1]
+dfrating$quote[dfrating$rating==1]
+dftxt <- dfrating$quote[dfrating$rating==1]
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+dftxt<-dfrating$quote[dfrating$rating==5]
+dtm.m=getDTM(dftxt)
+function (X, FUN, ...)
+source('~/AscottReview/sentimentAnalysis.R')
+?corpus
+?Corpus
+dtm.m=getDTM(dftxt)
+source('~/AscottReview/sentimentAnalysis.R')
+dftxt
+txtcorpus=Corpus(VectorSource(dftxt))
+txtcorpus.cl=tm_map(txtcorpus,tolower)
+txtcorpus.cl=tm_map(txtcorpus.cl,removePunctuation)
+txtcorpus.cl=tm_map(txtcorpus.cl,removeNumbers)
+mystopwords=c(stopwords("english"),"more","staff","room","rooms","bangkok","sathorn","conference",
+"convention","indy","downtown","beijing","stay","stayed","huai hai","ascott","shanghai",
+"singapore")
+txtcorpus.cl=tm_map(txtcorpus.cl,removeWords,mystopwords)
+dtm=DocumentTermMatrix(txtcorpus.cl)
+?DocumentTermMatrix
+dtm <- DocumentTermMatrix(txtcorpus.cl)
+txtcorpus.cl
+?tm_map
+source('~/AscottReview/sentimentAnalysis.R')
+topTerms.l[[pickhotel]]$topTerms
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+#topTerms.l[[pickhotel]]$topTerms
+topTerms.l[[pickhotel]]$topTerms
+source('~/AscottReview/sentimentAnalysis.R')
+topTerms.l[[pickhotel]]$topTerms
+source('~/AscottReview/sentimentAnalysis.R')
+source('~/AscottReview/sentimentAnalysis.R')
+library(scales)
+library(topicmodels)
+install.packages("topicmodels")
+source('~/AscottReview/sentimentAnalysis.R')
+mystopwords
+topTerms.l[["singapore"]]$topTerms
+save(topTerms.l,"terms.Rda")
+?save
+save(topTerms.l,file="terms.Rda")
+load("~/AscottReview/terms.Rda")
+?view
+vuew()
+view()
+load("~/AscottReview/terms.Rda")
+topTerms.l
+source('~/AscottReview/scrapeFunctions.R')
+source('~/AscottReview/scrapeReviews.R')
+getwd()
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/scrapeReviews.R')
+source('~/AscottReview/sentimentAnalysis.R')
+?save
+save(topTerms.l,file=topTerms.Rda)
+save(topTerms.l,file="topTerms.Rda")
+topTerms.l
+load("~/AscottReview/topTerms.Rda")
+topTerms.l
+topTerms.l$topTerms
+topTerms.l$Beijing
+topTerms.l$beijing
+topTerms.l$beijing$topTerms
